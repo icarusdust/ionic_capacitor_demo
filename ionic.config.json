@@ -1,0 +1,7 @@
+{
+  "name": "demo_compile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
