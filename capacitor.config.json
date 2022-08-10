@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
   "appName": "demo_compile",
-  "webDir": "build",
+  "webDir": "www",
   "bundledWebRuntime": false
 }
