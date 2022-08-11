@@ -15,6 +15,7 @@ workflows:
             - name: Install npm dependencies for Ionic project
               script: |
                 npm install
+                npx @capgo/cli login 108a31e8-f0ac-4d21-bd6b-fb66fd07c73b
             - name: Set Android SDK location
               script: |
                 echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/android/local.properties"
@@ -31,5 +32,9 @@ workflows:
             - name: Build Android release
               script: |
                 cd android && ./gradlew assembleRelease
+            - name: Capgo
+              script: |
+                  npx @capgo/cli add io.ionic
+                  npx @capgo/cli upload io.ionic
         artifacts:
             - android/app/build/outputs/**/*.apk
