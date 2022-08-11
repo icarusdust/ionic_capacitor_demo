@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "io.ionic",
   "appName": "demo_compile",
   "webDir": "build",
   "bundledWebRuntime": false
