@@ -1,6 +1,12 @@
+// capacitor.config.json
 {
-  "appId": "io.ionic",
-  "appName": "demo_compile",
-  "webDir": "build",
-  "bundledWebRuntime": false
+	"appId": "test.com",
+	"appName": "ionic_test",
+   "webDir": "build",
+  "bundledWebRuntime": false,
+	"plugins": {
+		"CapacitorUpdater": {
+			"autoUpdate": true
+		}
+	}
 }
