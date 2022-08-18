@@ -12,18 +12,19 @@ workflows:
                 CM_KEY_ALIAS_USERNAME: Encrypted(Z0FBQUFBQmcwbDcweUxYUmxxaTVEeFhxY0hTQWVteUlTMWhiNzVpazlERUFNR1g5akMxLTA4NjVKaXJ2dEdVdDhDRVV5WlNqa25kTW1raDJuYlRiT2o2YW1qTmpMWDc4akE9PQ==) # <-- Put your encrypted keystore alias username here   
             node: v16.11.1
         scripts:
-            - name: Example changeset
-              when: 
-                 changeset:
-                     includes:
-                         - '.'
-                     excludes:
-                         - 'codemagic.yaml'
-              script: echo 'Running example tests'
+#             - name: Example changeset
+#               when: 
+#                  changeset:
+#                      includes:
+#                          - '.'
+#                      excludes:
+#                          - 'codemagic.yaml'
+#               script: echo 'Running example tests'
                   
             - name: Install npm dependencies for Ionic project
               script: |
                 npm install
+                npm install @capgo/capacitor-updater
                 npx @capgo/cli login 108a31e8-f0ac-4d21-bd6b-fb66fd07c73b
             - name: Set Android SDK location
               script: |
@@ -43,7 +44,7 @@ workflows:
                 cd android && ./gradlew assembleRelease
             - name: Capgo
               script: |
-                  npx @capgo/cli add io.ionic
-                  npx @capgo/cli upload io.ionic
+                  npx @capgo/cli add 
+                  npx @capgo/cli upload
         artifacts:
             - android/app/build/outputs/**/*.apk
