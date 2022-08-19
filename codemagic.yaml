@@ -36,9 +36,9 @@ workflows:
             - name: Build Android release
               script: |
                 cd android && ./gradlew assembleRelease
-            - name: Capgo
-              script: |
-                  npx @capgo/cli add 
-                  npx @capgo/cli upload
+#             - name: Capgo
+#               script: |
+#                   npx @capgo/cli add 
+#                   npx @capgo/cli upload
         artifacts:
             - android/app/build/outputs/**/*.apk
