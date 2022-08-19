@@ -14,16 +14,7 @@ workflows:
         cache:
             cache_paths:
              - $CM_BUILD_DIR/node_modules	
-        scripts:
-#             - name: Example changeset
-#               when: 
-#                  changeset:
-#                      includes:
-#                          - '.'
-#                      excludes:
-#                          - 'codemagic.yaml'
-#               script: echo 'Running example tests'
-                  
+        scripts:  
             - name: Install npm dependencies for Ionic project
               script: |
                 npm install
