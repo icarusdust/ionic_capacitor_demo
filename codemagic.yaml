@@ -11,6 +11,9 @@ workflows:
                 CM_KEYSTORE_PATH: /tmp/keystore.keystore
                 CM_KEY_ALIAS_USERNAME: Encrypted(Z0FBQUFBQmcwbDcweUxYUmxxaTVEeFhxY0hTQWVteUlTMWhiNzVpazlERUFNR1g5akMxLTA4NjVKaXJ2dEdVdDhDRVV5WlNqa25kTW1raDJuYlRiT2o2YW1qTmpMWDc4akE9PQ==) # <-- Put your encrypted keystore alias username here   
             node: v16.11.1
+        cache:
+            cache_paths:
+             - $CM_BUILD_DIR/node_modules	
         scripts:
 #             - name: Example changeset
 #               when: 
