@@ -13,6 +13,7 @@ workflows:
             node: v16.11.1
             xcode: latest
             ndk: r25b
+            java: 1.8
         cache:
             cache_paths:
                - $CM_BUILD_DIR/node_modules
