@@ -32,7 +32,7 @@ workflows:
             - name: Update dependencies and copy web assets to native project
               script: |
                 # npx cap copy # <- use this is you don't need to update native dependencies
-                npx cap sync android# <- update native dependencies and copy web assets to native project
+                npx cap sync android # <- update native dependencies and copy web assets to native project
 #             - name: Wrapper
 #               script: | 
 #                 cd android && gradle wrapper
