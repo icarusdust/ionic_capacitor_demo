@@ -21,6 +21,7 @@ workflows:
             - name: Install npm dependencies for Ionic project
               script: |
                 npm install
+                ionic cap build android 
 #               npm install @capgo/capacitor-updater
 #               npx @capgo/cli login 108a31e8-f0ac-4d21-bd6b-fb66fd07c73b
             - name: Set Android SDK location
