@@ -4,9 +4,9 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m1
     environment:
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: io.codemagic.ionicsample
+      # ios_signing:
+      #   distribution_type: app_store
+      #   bundle_identifier: io.codemagic.ionicsample
       vars:
         # Ionic Xcode worskspace and scheme
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
