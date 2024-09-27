@@ -64,7 +64,7 @@ workflows:
                 echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/android/local.properties"
             - name: Set up keystore
               script: |
-                echo $CM_KEYSTORE | base64 --decode > /tmp/keystore.keystore
+                echo CM_KEYSTORE_PASSWORD | base64 --decode > /tmp/keystore.keystore
             - name: Update dependencies and copy web assets to native project
               script: |
                 # npx cap copy # <- use this is you don't need to update native dependencies
