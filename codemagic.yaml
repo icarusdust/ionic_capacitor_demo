@@ -25,6 +25,7 @@ workflows:
           rbenv global 3.3.4
       - name: Install npm dependencies for Ionic project
         script: |
+          ruby -v
           npm install
       - name: Cocoapods installation
         script: |
