@@ -3,6 +3,8 @@ workflows:
     name: Ionic Capacitor iOS Workflow
     max_build_duration: 120
     environment:
+      groups:
+       - capawesome
       # ios_signing:
       #   distribution_type: app_store
       #   bundle_identifier: io.codemagic.ionicsample
