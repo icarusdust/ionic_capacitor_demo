@@ -5,9 +5,9 @@ workflows:
     environment:
       groups:
        - capawesome
-      # ios_signing:
-      #   distribution_type: app_store
-      #   bundle_identifier: io.codemagic.ionicsample
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: io.ionic.cm
       vars:
         # Ionic Xcode worskspace and scheme
         XCODE_WORKSPACE: "App.xcworkspace"
