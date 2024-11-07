@@ -16,9 +16,13 @@ workflows:
         APP_STORE_APP_ID: 1555555551 # <-- Put the app id number here. This is found in App Store Connect > App > General > App Information
       xcode: latest # <-- set to specific version e.g. 14.3, 15.0 to avoid unexpected updates.
       cocoapods: default
-      ruby: 3.3.0
 
     scripts:
+      - name: Ruby version
+        script: |
+          brew upgrade ruby-build
+          rbenv install 3.3.4
+          rbenv global 3.3.4
       - name: Install npm dependencies for Ionic project
         script: |
           npm install
