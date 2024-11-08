@@ -30,6 +30,7 @@ workflows:
           npm install
       - name: Cocoapods installation
         script: | 
+          gem install cocoapods
           cd ios/App && pod install
       - name: Update dependencies and copy web assets to native project
         script: |
