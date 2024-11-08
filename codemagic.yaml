@@ -22,10 +22,11 @@ workflows:
         script: |
           brew upgrade ruby-build
           rbenv install 3.3.4
-          RBENV_VERSION=3.3.4
-          ruby -v
+          echo "RBENV_VERSION=3.3.4" >> $CM_ENV 
+          
       - name: Install npm dependencies for Ionic project
         script: |
+          ruby -v
           npm install
       - name: Cocoapods installation
         script: | 
