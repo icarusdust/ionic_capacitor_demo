@@ -22,7 +22,8 @@ workflows:
         script: |
           HOMEBREW_NO_ENV_HINTS=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew upgrade ruby-build
           rbenv install 3.3.4
-   
+          RBENV_VERSION=3.3.4
+          ruby -v
       - name: Install npm dependencies for Ionic project
         script: |
           npm install
